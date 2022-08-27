@@ -1,20 +1,20 @@
 m = int(input())
 n = int(input())
-list = []
 
-# 소수 찾기
-for num in range(m, n+1):
-    error = 0
-    if num > 1:
-        for i in range(2, num):
-            if num % i == 0:
-                error += 1
-        if error == 0:
-            list.append(num)
+result = []
 
-if list == []:
+for i in range(m, n + 1):
+    err = 0
+    if i > 1 :
+        for j in range(2, i):
+            if i % j == 0:
+                err += 1
+        if err == 0:
+            result.append(i)
+   
+
+if result == []:
     print(-1)
-else:
-    print(sum(list))
-    print(min(list))
-
+else :
+    print(sum(result))
+    print(min(result))

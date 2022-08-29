@@ -1,6 +1,4 @@
-a = input()
+a = int(input())
 b = input()
-print(int(a)*int(b[2]))
-print(int(a)*int(b[1]))
-print(int(a)*int(b[0]))
-print(int(a)*int(b))
+
+print(f"{a * int(b[-1])}\n{a * int(b[-2])}\n{a * int(b[-3])}\n{a * int(b)}")

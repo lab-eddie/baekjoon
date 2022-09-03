@@ -11,7 +11,6 @@ while 0 < n:
         a = True
         tmp = []
         tmp.append([j for j, ele in enumerate(word) if ele == i])
-        print(tmp)
         
         for k in tmp:
         
@@ -25,8 +24,19 @@ while 0 < n:
     if a:
         cnt += 1
         
-    
-        
     n -= 1
 
 print(cnt)
+
+# N = int(input())
+# count = 0
+
+# for _ in range(N):
+#     word_list = input()
+#     for i in range(len(word_list)-1):
+#         if word_list[i] != word_list[i+1]:
+#             if word_list[i] in word_list[i+1:]:
+#                 break
+#     else:
+#         count+=1
+# print(count)

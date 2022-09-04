@@ -1,15 +1,7 @@
-a, b, v = map(int, input().split())
-h = 0
-cnt = 0
-flag = True
-while flag:
-    h += a
-    if v <= h:
-        flag = False
-    else :
-        h -= b
-    
-    cnt += 1
+n = int(input())
 
-print(cnt)
-
+if 89 < n : print("A")
+elif 79 < n : print("B")
+elif 69 < n : print("C")
+elif 59 < n : print("D")
+else : print("F")

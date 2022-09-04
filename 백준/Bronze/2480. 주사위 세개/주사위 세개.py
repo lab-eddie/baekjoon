@@ -1,17 +1,13 @@
-a,b,c = map(int,input().split())
+a, b, c = map(int, input().split())
 
-if (a + b + c) / 3 == a:
-    print(a*1000 + 10000)
-elif a != b and b != c and a != c:
-    big = 0
-    for i in a,b,c:
-        if big < i:
-            big = i
-    print(big*100)
-else : 
-    if a == b:
-        print(a*100 + 1000)
-    elif b == c:
-        print(b*100 + 1000)
-    else : 
-        print(c*100 + 1000)
+if a == b == c: print(10000 + (a * 1000))
+
+elif a == b or a == c:
+    print(1000 + (a * 100))
+
+elif b == c:
+    print(1000 + (b * 100))
+    
+else:
+    m = [a,b,c]
+    print(max(m) * 100)

@@ -20,3 +20,4 @@ input = sys.stdin.readline
 a, b, v = map(int, input().split())
 
 result = v - a + 1
+print(result)

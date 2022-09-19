@@ -1,7 +1,11 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-i = input()
+nums = [int(_) for _ in input().strip()]
+
 result = 0
-while n > 0:
-    result += int(i[n-1])
-    n -= 1
+for num in nums:
+    result += num
+
 print(result)

@@ -1,14 +1,18 @@
-def self_number():
-    li = []
-    for i in range(1,10001):
-        li.append(i + sum([int(j) for j in str(i)]))
-    
-    num = set(range(1,10001))
-    result = num - set(li)
-    result = list(result)
-    result.sort()
-    for i in result:
-        print(i)
-    
+import sys
+input = sys.stdin.readline
 
-self_number()
+arr = [_ for _ in range(1,10001)]
+not_self = []
+for i in arr:
+    tmp = 0
+    for j in str(i):
+        tmp += int(j)
+    not_self.append(i + tmp)
+
+self_num = set(arr)-set(not_self)
+
+a = list(self_num)
+a.sort()
+
+for k in a:
+    print(k)

@@ -1,11 +1,19 @@
-n = int(input())
-cnt = 0
-while cnt < n:
-    point = list(map(int,input().split()))
-    ave = sum(point[1:]) / point[0]
-    good_person = []
-    for i in point[1:]:
+import sys
+input = sys.stdin.readline
+
+c = int(input())
+
+for _ in range(c):
+    
+    tmp = [int(_) for _ in input().split()]
+    
+    person = tmp[0]
+    points = tmp[1:]
+    
+    ave = sum(points) / person
+    result = []
+    for i in points:
         if i > ave:
-            good_person.append(i)
-    print(f"{len(good_person) / point[0] * 100:.3f}%")
-    cnt += 1
+            result.append(i)
+
+    print(f"{(len(result) / person * 100):.3f}%")

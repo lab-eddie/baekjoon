@@ -1,7 +1,11 @@
-inp = input().split()
-result = 0
-for i in inp:
-    num = int(i[::-1])
-    if num > result:
-        result = num
-print(result)
+import sys
+input = sys.stdin.readline
+
+a, b = map(str, input().split())
+
+a = a[::-1]
+b = b[::-1]
+
+if int(a) > int(b):
+    print(a)
+else: print(b)

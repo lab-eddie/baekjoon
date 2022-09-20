@@ -1,9 +1,27 @@
-alp = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split()
-dial = [alp[:3],alp[3:6],alp[6:9],alp[9:12],alp[12:15],alp[15:19],alp[19:22],alp[22:]]
-result = []
-inp = input()
-for n in inp:
-    for i in dial:
-        if n in i:
-            result.append(dial.index(i)+3)
-print(sum(result))
+import sys
+input = sys.stdin.readline
+
+alphabet = [_ for _ in "abcdefghijklmnopqrstuvwxyz".upper()]
+
+text = input().strip()
+
+result = 0
+for i in text:
+    if i in alphabet[0:3]: #2
+        result += 3
+    elif i in alphabet[3:6]: #3
+        result += 4
+    elif i in alphabet[6:9]: #4
+        result += 5
+    elif i in alphabet[9:12]: #5
+        result += 6
+    elif i in alphabet[12:15]: #6
+        result += 7
+    elif i in alphabet[15:19]: #7
+        result += 8
+    elif i in alphabet[19:22]: #8
+        result += 9
+    elif i in alphabet[22:]: #9
+        result += 10
+
+print(result)

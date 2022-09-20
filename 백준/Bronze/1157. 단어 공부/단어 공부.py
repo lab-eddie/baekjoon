@@ -1,12 +1,21 @@
-inp = input().casefold()
-s_inp = set(inp)
+import sys
+input = sys.stdin.readline
+
+text = input().strip().upper()
+
+a = set(text)
+
 result = []
-for i in s_inp:
-    result.append([inp.count(i),i])
+
+for i in a:
+    result.append([text.count(i), i])
+
 result.sort()
-try :
+
+try:
     if result[-1][0] == result[-2][0]:
         print("?")
-    else : print(result[-1][1].upper())
+    else:
+        print(result[-1][1])
 except:
-    print(result[-1][1].upper())
+    print(result[-1][1])

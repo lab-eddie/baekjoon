@@ -1,6 +1,12 @@
-croatia = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
-word = input()
+import sys
+input = sys.stdin.readline
 
-for i in croatia :
-    word = word.replace(i, '*')  # input 변수와 동일한 이름의 변수
-print(len(word))
+text = input().strip()
+
+cro_alp = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="]
+
+for i in cro_alp:
+    if i in text:
+        text = text.replace(i,"*")
+
+print(len(text))

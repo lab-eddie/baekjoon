@@ -1,12 +1,18 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 
-words = []
-result = []
+strings = []
 for _ in range(n):
-    words.append(input())
+    strings.append(input().strip())
 
-for i in set(words):
-    result.append([len(i),i])
+strings = list(set(strings))
+
+result = []
+
+for i in strings:
+    result.append([len(i), i])
 
 result.sort()
 
